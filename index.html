@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subhânallâhi el-Azîm ve bihamdihî 🤍</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:linear-gradient(#87cfff 0%, #dff6ff 55%, #6ecb63 55%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.hadis{
+    max-width:800px;
+    font-size:clamp(14px,3.5vw,20px);
+    background:rgba(255,255,255,0.9);
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    margin-bottom:20px;
+}
+
+button{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#2e8b57;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+button:hover{
+    background:#1f5e3c;
+    transform:scale(1.05);
+}
+
+/* Hurma Ağacı */
+.tree{
+    position:absolute;
+    bottom:70px;
+    left:50%;
+    transform:translateX(-50%) scale(0);
+    width:120px;
+    height:300px;
+    transition:1.5s ease;
+}
+
+.trunk{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:30px;
+    height:180px;
+    background:linear-gradient(#8b5a2b,#6e3d22);
+    border-radius:15px;
+}
+
+.leaf{
+    position:absolute;
+    width:140px;
+    height:60px;
+    background:#2ecc71;
+    border-radius:50% 50% 0 0;
+    top:40px;
+    left:50%;
+    transform-origin:bottom center;
+}
+.leaf:nth-child(1){ transform:translateX(-50%) rotate(0deg);}
+.leaf:nth-child(2){ transform:translateX(-50%) rotate(45deg);}
+.leaf:nth-child(3){ transform:translateX(-50%) rotate(-45deg);}
+.leaf:nth-child(4){ transform:translateX(-50%) rotate(90deg);}
+.leaf:nth-child(5){ transform:translateX(-50%) rotate(-90deg);}
+
+.couple{
+    position:absolute;
+    bottom:70px;
+    left:calc(50% + 100px);
+    font-size:50px;
+    opacity:0;
+    transition:2s ease;
+}
+
+.dua{
+    position:absolute;
+    bottom:-120px;
+    font-size:clamp(14px,3.5vw,20px);
+    background:rgba(255,255,255,0.9);
+    padding:15px 25px;
+    border-radius:20px;
+    transition:2s ease;
+    max-width:90%;
+}
+
+.show .tree{
+    transform:translateX(-50%) scale(1);
+}
+.show .couple{
+    opacity:1;
+}
+.show .dua{
+    bottom:20px;
+}
+
+@media(max-width:600px){
+    .couple{
+        left:calc(50% + 60px);
+        font-size:35px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="hadis">
+Câbir b. Abdullah -radıyallahu anh-'tan rivayet edildiğine göre 
+Nebi -sallallahu aleyhi ve sellem- şöyle buyurmuştur:<br><br>
+<strong>«Kim, "Subhânallâhi el-Azîm ve bihamdihî" derse onun için Cennet'te bir hurma ağacı dikilir.»</strong>
+<br><br>
+Zikri çektiysen butona bas 🤲
+</div>
+
+<button onclick="showScene()">Amin 🤍</button>
+
+<div class="tree">
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="trunk"></div>
+</div>
+
+<div class="couple">👫</div>
+
+<div class="dua">
+ALLAH bizi cennetine alırsa beraber bu diktiğimiz ağacın altında hurma yiyeceğiz canım eşim ❤️
+</div>
+
+<script>
+function showScene(){
+    document.body.classList.add("show");
+}
+</script>
+
+</body>
+</html>
